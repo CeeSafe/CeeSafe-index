@@ -1,6 +1,6 @@
 # The CeeSafe package index
 
-The registry of [CeeSafe](https://github.com/vkuttyp/CeeSafe) packages (the tooling specification's §4.6–§4.8, which
+The registry of [CeeSafe](https://github.com/CeeSafe/CeeSafe) packages (the tooling specification's §4.6–§4.8, which
 CeeSafe shares with Nova until its fork point). Each package has a file `packages/<name>.toml`, with one entry per
 published version:
 
@@ -14,8 +14,8 @@ dependencies = { shapes = "2.1" }         # its registry requirements
 ```
 
 The code itself stays in each package's own repository: an entry only names a commit and the hash of what it holds.
-`ceesafec fetch` reads this index (set `CEESAFE_INDEX=https://github.com/vkuttyp/CeeSafe-index` until it is
-ceesafec's default), chooses versions, and records each commit and hash in the user's `ceesafe.lock`.
+`ceesafec fetch` reads this index, ceesafec's default (`CEESAFE_INDEX` names another), chooses versions, and records
+each commit and hash in the user's `ceesafe.lock`.
 
 ## Publishing a version
 
@@ -35,6 +35,5 @@ working, and no new resolution chooses it.
 - its hash and its registry dependencies are the entry's;
 - each package's versions increase down the file.
 
-Until ceesafec has a release, run it locally before merging (`ceesafec index-check` in a checkout of this repository);
-a CI workflow will run it on every pull request once a release exists. A new package name is reviewed by a maintainer
-before it is merged.
+Run it locally before merging (`ceesafec index-check` in a checkout of this repository); no CI workflow runs it yet. A
+new package name is reviewed by a maintainer before it is merged.
