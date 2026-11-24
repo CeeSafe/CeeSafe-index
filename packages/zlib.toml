@@ -1,0 +1,5 @@
+[[version]]
+version = "0.1.0"
+git = "https://github.com/CeeSafe/zlib.git"
+commit = "1be5ccf2912d896b261178b3e0b41454b6102499"
+hash = "sha256:dfce6d9e06edb6d9a1fcef0a26532a2359781801eea01404a175afc8dd6180fb"
